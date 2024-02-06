@@ -30,7 +30,7 @@ describe('Gilded Rose Approval Test', () => {
     for (let day = 1; day <= 60; day++) {
       gildedRose.update_quality()
       gildedRose.get_items().forEach(item => {
-        data += 'name:' + item.name + ' sell_in:' + item.sell_in + ' quality:' + item.quality + '\n'
+        data += 'name:' + item.name + ' sellIn:' + item.sellIn + ' quality:' + item.quality + '\n'
       })
     }
 

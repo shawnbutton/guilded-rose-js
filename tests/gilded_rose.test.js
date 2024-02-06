@@ -21,7 +21,7 @@ describe('Gilded Rose', () => {
 
     gildedRose.update_quality()
 
-    expect(gildedRose.get_items()[0].sell_in).toEqual(20)
+    expect(gildedRose.get_items()[0].sellIn).toEqual(20)
   })
 
   it('should lower the sellIn by one for normal items', () => {
@@ -30,7 +30,7 @@ describe('Gilded Rose', () => {
 
     gildedRose.update_quality()
 
-    expect(gildedRose.get_items()[0].sell_in).toEqual(9)
+    expect(gildedRose.get_items()[0].sellIn).toEqual(9)
   })
 
   it('should lower the quality by one for normal items', () => {
