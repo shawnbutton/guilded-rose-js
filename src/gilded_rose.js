@@ -8,13 +8,11 @@ function Item(name, sellIn, quality) {
 
 var items = [];
 
-function set_items(itemsToSet) {
+const setItems = itemsToSet => {
   items = itemsToSet
 }
 
-function get_items() {
-  return items
-}
+const getItems = () => items
 
 //items.push(new Item('+5 Dexterity Vest', 10, 20));
 //items.push(new Item('Aged Brie', 2, 0));
@@ -23,7 +21,7 @@ function get_items() {
 //items.push(new Item('Backstage passes to a TAFKAL80ETC concert', 15, 20));
 //items.push(new Item('Conjured Mana Cake', 3, 6));
 
-function update_quality() {
+function updateQuality() {
   for (var i = 0; i < items.length; i++) {
     if (items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
       if (items[i].quality > 0) {
@@ -71,8 +69,9 @@ function update_quality() {
   }
 }
 
-module.exports.Item = Item;
-module.exports.get_items = get_items;
-module.exports.set_items = set_items;
-module.exports.update_quality = update_quality;
-
+module.exports = {
+  Item,
+  getItems,
+  setItems,
+  updateQuality
+}
